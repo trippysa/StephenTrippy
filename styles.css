@@ -709,6 +709,12 @@ ul { list-style: none; }
   color: rgba(255,255,255,0.35);
 }
 
+.footer__claude {
+  color: var(--green);
+  transition: color 0.2s;
+}
+.footer__claude:hover { color: var(--green-light); }
+
 /* =========================================
    SCROLL ANIMATIONS
    ========================================= */

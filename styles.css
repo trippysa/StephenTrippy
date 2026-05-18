@@ -588,6 +588,7 @@ ul { list-style: none; }
 .project-card__visual--strategy  { background: #0d1b38; }
 .project-card__visual--rag       { background: #071a15; }
 .project-card__visual--erp       { background: #111827; }
+.project-card__visual--burn      { background: #071a2e; }
 
 .project-card__visual svg {
   width: 100%;

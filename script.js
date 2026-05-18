@@ -60,9 +60,9 @@ function animateCounter(el, target, suffix, duration = 1200) {
 }
 
 const counterMap = {
-  'Years Experience':        { val: 3,   suffix: '+' },
-  'Hours Saved / Quarter':   { val: 100, suffix: '+' },
-  'Reporting Effort Reduced':{ val: 25,  suffix: '%' },
+  'Years Experience':             { val: 3,   suffix: '+' },
+  'Hours Saved / Quarter':        { val: 100, suffix: '+' },
+  'Manual Effort Reduced':        { val: 75,  suffix: '%' },
 };
 
 const statObserver = new IntersectionObserver((entries) => {

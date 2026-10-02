@@ -60,7 +60,7 @@ const yearsText = String(YEARS); // 3.5 -> "3.5", 4 -> "4"
 
 document.querySelectorAll('.js-years').forEach(el => { el.textContent = yearsText; });
 document.querySelectorAll('meta[name="description"], meta[property="og:description"], meta[name="twitter:description"]')
-  .forEach(m => m.setAttribute('content', m.getAttribute('content').replace(/\d+(\.5)?\+ years/, `${yearsText}+ years`)));
+  .forEach(m => m.setAttribute('content', m.getAttribute('content').replace(/\d+(\.5)? years/, `${yearsText} years`)));
 
 // ─── Animated stat counters ──────────────────────────────────────────────────
 function animateCounter(el, target, suffix, duration = 1200) {
@@ -78,7 +78,7 @@ function animateCounter(el, target, suffix, duration = 1200) {
 }
 
 const counterMap = {
-  'Years Experience':             { val: YEARS, suffix: '+' },
+  'Years Experience':             { val: YEARS, suffix: '' },
   'Hours Saved / Quarter':        { val: 100, suffix: '+' },
   'Manual Effort Reduced':        { val: 75,  suffix: '%' },
 };

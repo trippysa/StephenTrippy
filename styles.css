@@ -570,10 +570,6 @@ ul { list-style: none; }
   box-shadow: var(--shadow-lg);
 }
 
-.project-card--highlight {
-  border-color: #8B5CF6;
-}
-
 /* Visual header */
 .project-card__visual {
   width: 100%;

@@ -46,6 +46,22 @@ window.addEventListener('scroll', () => {
   if (heroBolt) heroBolt.style.transform = `translateY(${y * 0.15}px)`;
 }, { passive: true });
 
+// ─── Years of experience (from Jan 2023, in half-year steps) ────────────────
+const CAREER_START = new Date(2023, 0, 1);
+
+function yearsOfExperience(now = new Date()) {
+  const months = (now.getFullYear() - CAREER_START.getFullYear()) * 12
+               + (now.getMonth() - CAREER_START.getMonth());
+  return Math.max(0, Math.floor(months / 6) / 2);
+}
+
+const YEARS = yearsOfExperience();
+const yearsText = String(YEARS); // 3.5 -> "3.5", 4 -> "4"
+
+document.querySelectorAll('.js-years').forEach(el => { el.textContent = yearsText; });
+document.querySelectorAll('meta[name="description"], meta[property="og:description"], meta[name="twitter:description"]')
+  .forEach(m => m.setAttribute('content', m.getAttribute('content').replace(/\d+(\.5)?\+ years/, `${yearsText}+ years`)));
+
 // ─── Animated stat counters ──────────────────────────────────────────────────
 function animateCounter(el, target, suffix, duration = 1200) {
   const start = performance.now();
@@ -53,14 +69,16 @@ function animateCounter(el, target, suffix, duration = 1200) {
     const progress = Math.min((now - start) / duration, 1);
     // ease out quart
     const ease = 1 - Math.pow(1 - progress, 4);
-    el.textContent = Math.round(ease * target) + suffix;
+    // round to the target's precision (half steps for 3.5, whole numbers otherwise)
+    const increment = Number.isInteger(target) ? 1 : 0.5;
+    el.textContent = Math.round((ease * target) / increment) * increment + suffix;
     if (progress < 1) requestAnimationFrame(step);
   }
   requestAnimationFrame(step);
 }
 
 const counterMap = {
-  'Years Experience':             { val: 3,   suffix: '+' },
+  'Years Experience':             { val: YEARS, suffix: '+' },
   'Hours Saved / Quarter':        { val: 100, suffix: '+' },
   'Manual Effort Reduced':        { val: 75,  suffix: '%' },
 };

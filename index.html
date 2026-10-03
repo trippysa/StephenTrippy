@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stephen Trippy | Data Analyst & Engineer</title>
+  <title>Stephen Trippy | Data & Strategy Analyst</title>
+  <link rel="canonical" href="https://stephentrippy.com/" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <meta name="description" content="Stephen Trippy is a Data Analyst and Engineer with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
+  <meta name="description" content="Stephen Trippy is a Data and Strategy Analyst with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
 
   <!-- Open Graph (LinkedIn, Slack, iMessage previews) -->
   <meta property="og:type"        content="website" />
   <meta property="og:url"         content="https://stephentrippy.com" />
-  <meta property="og:title"       content="Stephen Trippy | Data Analyst & Engineer" />
-  <meta property="og:description" content="Stephen Trippy is a Data Analyst and Engineer with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
+  <meta property="og:title"       content="Stephen Trippy | Data & Strategy Analyst" />
+  <meta property="og:image"       content="https://stephentrippy.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="627" />
+  <meta property="og:image:alt"   content="Stephen Trippy, Data &amp; Strategy Analyst" />
+  <meta property="og:description" content="Stephen Trippy is a Data and Strategy Analyst with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
 
   <!-- Twitter / X card -->
-  <meta name="twitter:card"        content="summary" />
-  <meta name="twitter:title"       content="Stephen Trippy | Data Analyst & Engineer" />
-  <meta name="twitter:description" content="Stephen Trippy is a Data Analyst and Engineer with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:image"       content="https://stephentrippy.com/og-image.png" />
+  <meta name="twitter:title"       content="Stephen Trippy | Data & Strategy Analyst" />
+  <meta name="twitter:description" content="Stephen Trippy is a Data and Strategy Analyst with 3.5 years of experience in financial modeling, Power BI, and automated reporting. Passionate about the clean energy transition." />
 
   <!-- Structured data: Person -->
   <script type="application/ld+json">
@@ -27,7 +33,8 @@
     "@type": "Person",
     "name": "Stephen Trippy",
     "url": "https://stephentrippy.com",
-    "jobTitle": "Data Analyst & Engineer",
+    "sameAs": ["https://www.linkedin.com/in/stephen-trippy-172710a7/"],
+    "jobTitle": "Data & Strategy Analyst",
     "knowsAbout": ["Data Analysis", "Power BI", "SQL", "Python", "Clean Energy", "Business Intelligence"],
     "alumniOf": {
       "@type": "CollegeOrUniversity",
@@ -63,8 +70,9 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero__bg-grid"></div>
-    <div class="hero__content">
-      <p class="hero__eyebrow">Data Analyst &amp; Engineer</p>
+    <div class="hero__content hero__content--photo">
+      <div class="hero__text">
+      <p class="hero__eyebrow">Data &amp; Strategy Analyst</p>
       <h1 class="hero__name">Stephen Trippy</h1>
       <p class="hero__tagline">
         Turning complex data into clean decisions,<br />
@@ -74,6 +82,8 @@
         <a href="#projects" class="btn btn--primary">See My Work</a>
         <a href="#contact" class="btn btn--ghost">Get in Touch</a>
       </div>
+      </div>
+      <img class="hero__photo" src="headshot.jpg" alt="Stephen Trippy" width="800" height="800" />
     </div>
     <div class="hero__bolt" aria-hidden="true">
       <svg viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +127,9 @@
             <span class="stat-card__label">Manual Effort Reduced</span>
           </div>
           <div class="stat-card stat-card--accent">
-            <span class="stat-card__num">&#9889;</span>
+            <span class="stat-card__num stat-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5L4.5 13.5h6.5l-1 8 8.5-11h-6.5l1-8z"/></svg>
+            </span>
             <span class="stat-card__label">Passionate about Electrification</span>
           </div>
         </div>
@@ -417,8 +429,12 @@
 
       <div class="contact__links">
         <a href="mailto:contact@stephentrippy.com" class="contact__link">
-          <span class="contact__link-icon">&#9993;</span>
+          <svg class="contact__link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg>
           contact@stephentrippy.com
+        </a>
+        <a href="https://www.linkedin.com/in/stephen-trippy-172710a7/" class="contact__link" target="_blank" rel="noopener me">
+          <svg class="contact__link-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          LinkedIn
         </a>
       </div>
     </div>

@@ -690,7 +690,9 @@ ul { list-style: none; }
 }
 
 .contact__link-icon {
-  font-size: 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
 }
 
 /* =========================================
